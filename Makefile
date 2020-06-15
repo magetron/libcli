@@ -15,12 +15,12 @@ REVISION = 4
 LIB = libcli.so
 LIB_STATIC = libcli.a
 
-CC = gcc
+CC = gcc-9
 AR = ar
 ARFLAGS = rcs
 DEBUG = -g
 OPTIM = -O3
-override CFLAGS += $(DEBUG) $(OPTIM) -Wall -std=c99 -pedantic -Wformat-security -Wno-format-zero-length -Werror -Wwrite-strings -Wformat -fdiagnostics-show-option -Wextra -Wsign-compare -Wcast-align -Wno-unused-parameter
+override CFLAGS += $(DEBUG) $(OPTIM) -Wall -std=gnu99 -pedantic -Wformat-security -Wno-format-zero-length -Werror -Wwrite-strings -Wformat -fdiagnostics-show-option -Wextra -Wsign-compare -Wcast-align -Wno-unused-parameter
 override LDFLAGS += -shared
 override LIBPATH += -L.
 

@@ -32,6 +32,17 @@
 #define MATCH_REGEX 1
 #define MATCH_INVERT 2
 
+// Fix non-implementation of strchrnul on macOS
+char *strchrnul(const char *s, int c) {
+  char *ptr = strchr(s, c);
+
+  if (!ptr) {
+    ptr = strchr(s, '\0');
+  }
+
+  return ptr;
+}
+
 #ifdef WIN32
 // Stupid windows has multiple namespaces for filedescriptors, with different read/write functions required for each ..
 int read(int fd, void *buf, unsigned int count) {
