@@ -1,3 +1,14 @@
+# Changes :
+
+## `libcli.c`
+* add naive custom implementation of `char *strchrnul(const char *s, int c)`
+
+## `Makefile`
+* use `gcc-9` instead, as `gcc` aliases to `clang` on `macOS`
+* set `CFLAGS` to `--std=gnu99`
+
+# Original `README.md`
+
 Libcli provides a shared C library for including a Cisco-like command-line
 interface into other software.
 
