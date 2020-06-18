@@ -15,7 +15,7 @@ REVISION = 4
 LIB = libcli.so
 LIB_STATIC = libcli.a
 
-CC = gcc-9
+CC = gcc
 AR = ar
 ARFLAGS = rcs
 DEBUG = -g
